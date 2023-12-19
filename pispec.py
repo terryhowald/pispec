@@ -21,6 +21,7 @@ bars = plt.bar(wavelengths, data, width=32, color=colors)
 obj = AS7341.AS7341()
 
 # Animation fuction to update bar graph with sensor data
+# Sensors must be read 4 at a time
 def animate(frame):
     global bars
     intensity = 0
