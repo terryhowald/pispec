@@ -14,7 +14,7 @@ from waveshare_AS7341 import AS7341
 
 # Declare globals
 fig = plt.figure(num=" ", figsize = (10, 6))
-data = [10, 20, 30, 40, 50, 60, 70, 80]
+data = [0, 0, 0, 0, 0, 0, 0, 0]
 colors = ['violet', 'indigo', 'blue', 'cyan', 'green', 'yellow', 'orange', 'red', ]
 wavelengths = [418.75, 456.25, 493.75, 531.25, 568.75, 606.25, 643.75, 681.25]
 bars = plt.bar(wavelengths, data, width=32, color=colors)
