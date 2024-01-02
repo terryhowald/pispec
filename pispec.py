@@ -57,14 +57,18 @@ ani = animation.FuncAnimation(fig, animate, frames=len(data))
 
 def main():
     # Setup AS7341
-    obj.measureMode = 0
+
     obj.AS7341_ATIME_config(100)
     obj.AS7341_ASTEP_config(999)
     obj.AS7341_AGAIN_config(6)
-    #obj.AS7341_EnableLED(True)      #LED Enable
-    #obj.AS7341_ControlLed(True,10)
-    #time.sleep(5)
-    #obj.AS7341_EnableLED(False)     #LED Disable
+    obj.AS7341_EnableLED(True)      #LED Enable
+    obj.AS7341_ControlLed(True,10)
+    print("Turn on LED for 2 seconds")
+    time.sleep(2)
+    obj.AS7341_ControlLed(False, 0)
+    obj.AS7341_EnableLED(False)     #LED Disable
+
+    obj.measureMode = 0
 
     # Take first sensor measurements
     obj.AS7341_startMeasure(0)
